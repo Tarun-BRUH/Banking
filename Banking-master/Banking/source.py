@@ -73,6 +73,29 @@ class Customer :
             print " " 
 
             
+    
+    def Changepass(self):
+        print "Changing Password. Enter original password: "
+        testpass = raw_input("")
+        if testpass == self.Password :
+            newpass = raw_input("Enter new password : ")
+            confnewpass= raw_input("Confirm the password: " )
+
+            if newpass == confnewpass  :
+                self.Password = newpass
+                print "Password Successfully changed. It is: " , self.Password
+            else :
+                print "Passwords do not match.Try again"
+
+        else :
+            print "Passwords do not match..."
+    
+    
+    
+    
+    
+    
+    
     def ChangeData(self):
         print "What do you want to change? "
         print "0.Exit \n 1.Password \n 2.Address \n 3.DOB \n 4.Email \n 5.Phone number"
